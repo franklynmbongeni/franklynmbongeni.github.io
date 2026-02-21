@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mbongeni Franklyn Ngwenya | Software Developer</title>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --card: #f3f4f6;
+  --accent: #2563eb;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: #1e293b;
+  --accent: #3b82f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+button.toggle {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  padding: 60px 10%;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--card);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>Mbongeni Franklyn Ngwenya</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#current">What I'm Up To</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle" onclick="toggleMode()">Dark Mode</button>
+  </div>
+</nav>
+
+<header>
+  <img src="https://via.placeholder.com/150" alt="Profile Picture">
+  <h1>Computer Science Student</h1>
+  <p>Aspiring Software Engineer | Problem Solver | Lifelong Learner</p>
+  <a href="resume.pdf" class="button" download>Download Resume</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a Computer Science student passionate about building scalable
+      systems and solving real-world problems through software.
+      I enjoy learning new technologies and continuously improving my skills.
+    </p>
+  </div>
+</section>
+
+<section id="current">
+  <h2>What I'm Currently Working On</h2>
+  <div class="card">
+    <ul>
+      <li>📘 Getting an aws cloud certified practitioner certificate  </li>
+      <li>🐳 Learning containerization with Docker</li>
+
+      <li>⚙️ Learning backend development concepts</li>
+      <li>🚀 Exploring open-source contributions</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+    <p>GitHub: <a href="#">Your GitHub</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Mbongeni Franklyn Ngwenya
+</footer>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
+
