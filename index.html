@@ -34,14 +34,7 @@ body {
   transition: 0.3s;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 10%;
-  position: sticky;
-  top: 0;
-  background: var(--bg);
-}
+
 
 nav a {
   text-decoration: none;
@@ -50,14 +43,6 @@ nav a {
   font-weight: bold;
 }
 
-button.toggle {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-}
 
 header {
   text-align: center;
@@ -66,8 +51,8 @@ header {
 
 header img {
   width: 150px;
-  height: 150px;          /* Force equal height */
-  object-fit: cover;      /* Prevent stretching */
+  height: 150px;
+  object-fit: cover;
   border-radius: 50%;
   margin-bottom: 20px;
 }
@@ -152,8 +137,8 @@ footer {
 
 nav {
   display: flex;
-  flex-direction: column; /* Stack title and links */
-  align-items: center;    /* Center everything horizontally */
+  flex-direction: column;
+  align-items: center;
   padding: 20px 10%;
   background: var(--bg);
   position: sticky;
@@ -161,32 +146,37 @@ nav {
 }
 
 nav div:first-child {
-  margin-bottom: 10px; /* Space between name and links */
+  margin-bottom: 10px;
 }
 
 nav div:last-child {
   display: flex;
-  gap: 20px;           /* Space between links */
+  gap: 20px;
 }
 
 button.toggle {
-  position: fixed;          /* Float over the page */
-  top: 20px;                /* Distance from top */
-  right: 20px;              /* Distance from right */
-  z-index: 1000;            /* Stay on top of content */
-  background: var(--accent);
-  color: white;
-  border: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--accent);
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
 }
 
+button.toggle:hover {
+  background: var(--accent);
+  color: white;
+}
+
 @media (max-width: 768px) {
   button.toggle {
-    top: auto;        /* Remove fixed top */
-    bottom: 20px;     /* Float near bottom */
+    top: auto;
+    bottom: 20px;
     right: 20px;
   }
 }
@@ -202,7 +192,7 @@ button.toggle {
     <a href="#about">About</a>
     <a href="#current">What I'm Up To</a>
     <a href="#contact">Contact</a>
-    <button class="toggle" onclick="toggleMode()">Dark Mode</button>
+    <button class="toggle" onclick="toggleMode()">🌑</button>
   </div>
 </nav>
 
@@ -296,13 +286,8 @@ button.toggle {
   © 2026 Mbongeni Franklyn Ngwenya
 </footer>
 
-<script>
-function toggleMode() {
-  document.body.classList.toggle("dark");
-}
-</script>
 
-<!-- Existing content... -->
+
 
 <script>
 function toggleMode() {
@@ -314,7 +299,7 @@ function toggleMode() {
   if (body.classList.contains("dark")) {
     btn.textContent = "☀️";   // Sun emoji + text
   } else {
-    btn.textContent = "🌙";    // Moon emoji + text
+    btn.textContent = "🌑";
   }
 }
 </script>
@@ -322,6 +307,5 @@ function toggleMode() {
 </body>
 </html>
 
-</body>
-</html>
+
 
