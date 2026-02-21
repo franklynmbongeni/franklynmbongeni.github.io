@@ -183,6 +183,14 @@ button.toggle {
   transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+  button.toggle {
+    top: auto;        /* Remove fixed top */
+    bottom: 20px;     /* Float near bottom */
+    right: 20px;
+  }
+}
+
 </style>
 </head>
 
@@ -304,13 +312,9 @@ function toggleMode() {
   body.classList.toggle("dark");
 
   if (body.classList.contains("dark")) {
-    btn.style.background = "#ffffff";  // White background
-    btn.style.color = "#111827";       // Dark text
-    btn.textContent = "Light Mode";    // Update text
+    btn.textContent = "☀️";   // Sun emoji + text
   } else {
-    btn.style.background = "";         // Reset to CSS var(--accent)
-    btn.style.color = "";               // Reset to white
-    btn.textContent = "Dark Mode";     // Update text
+    btn.textContent = "🌙";    // Moon emoji + text
   }
 }
 </script>
