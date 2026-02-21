@@ -169,6 +169,20 @@ nav div:last-child {
   gap: 20px;           /* Space between links */
 }
 
+button.toggle {
+  position: fixed;          /* Float over the page */
+  top: 20px;                /* Distance from top */
+  right: 20px;              /* Distance from right */
+  z-index: 1000;            /* Stay on top of content */
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
 </style>
 </head>
 
@@ -279,6 +293,30 @@ function toggleMode() {
   document.body.classList.toggle("dark");
 }
 </script>
+
+<!-- Existing content... -->
+
+<script>
+function toggleMode() {
+  const body = document.body;
+  const btn = document.querySelector('button.toggle');
+
+  body.classList.toggle("dark");
+
+  if (body.classList.contains("dark")) {
+    btn.style.background = "#ffffff";  // White background
+    btn.style.color = "#111827";       // Dark text
+    btn.textContent = "Light Mode";    // Update text
+  } else {
+    btn.style.background = "";         // Reset to CSS var(--accent)
+    btn.style.color = "";               // Reset to white
+    btn.textContent = "Dark Mode";     // Update text
+  }
+}
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
