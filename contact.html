@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Elias Thorne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-content {
+            padding-top: 5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: 15vw;
+            position: relative;
+            z-index: 10;
+        }
+        .contact-content h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: var(--accent-gold);
+        }
+        .contact-box {
+            background: var(--bg-card-glass);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(12px);
+        }
+        .contact-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+        .fade-out-bridge {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: #000;
+            z-index: 9999;
+            pointer-events: none;
+            animation: cinematicReveal 1s ease-out forwards;
+        }
+        @keyframes cinematicReveal {
+            0% { opacity: 1; visibility: visible; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+    </style>
+</head>
+<body>
+    <div class="fade-out-bridge"></div>
+    <div class="bg-container" style="background-image: url('assets/batmancall.jpeg');">
+        <div class="bg-overlay"></div>
+    </div>
+    
+    <nav id="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">BACK TO COM</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact-content fade-in" style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-end; padding-top: 15rem;">
+            <a href="mailto:hello@example.com" class="nav-link">EMAIL</a>
+            <a href="https://github.com/" class="nav-link" target="_blank">GITHUB</a>
+            <a href="https://linkedin.com/" class="nav-link" target="_blank">LINKEDIN</a>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
