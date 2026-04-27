@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills - Mbongeni Franklyn Ngwenya">
+    <title>Skills - Mbongeni Franklyn Ngwenya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-content {
+            padding-top: 8rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .fade-out-bridge {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            z-index: 9999;
+            pointer-events: none;
+            animation: cinematicReveal 1s ease-out forwards;
+        }
+
+        @keyframes cinematicReveal {
+            0% {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-container">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">BACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-content fade-in visible">
+            <div class="section-header">
+                <h2>SKILLS</h2>
+                <div class="bat-divider">
+                    <div style="width: 60px; height: 3px; background: var(--accent-gold); border-radius: 2px;"></div>
+                </div>
+            </div>
+            <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); max-width: 1200px; margin: 0 auto; padding-bottom: 4rem;">
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Python</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Backend Development, Scripting, Automation</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" alt="Bash Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Bash</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">System Administration, Shell Scripting</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Git</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Version Control, Collaboration</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Linux</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Operating System, Server Management</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="Windows Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Windows</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Operating System, Environment Configuration</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); display: block; margin-left: auto; margin-right: auto;">
+                        <circle cx="12" cy="5" r="3" />
+                        <circle cx="6" cy="19" r="3" />
+                        <circle cx="18" cy="19" r="3" />
+                        <line x1="10.5" y1="7.5" x2="7.5" y2="16.5" />
+                        <line x1="13.5" y1="7.5" x2="16.5" y2="16.5" />
+                    </svg>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Data Structures</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Problem Solving, Optimization</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">MySQL</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Relational Databases, Queries</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++ Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">C++</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Object-Oriented Programming, Memory Management</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-content fade-in visible" style="padding-top: 2rem;">
+            <div class="section-header">
+                <h2>PASSIONATE ABOUT</h2>
+                <div class="bat-divider">
+                    <div style="width: 60px; height: 3px; background: var(--accent-gold); border-radius: 2px;"></div>
+                </div>
+            </div>
+            <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); max-width: 1200px; margin: 0 auto; padding-bottom: 4rem;">
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS Logo" width="80" height="80" style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">AWS</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Cloud Infrastructure, Scalability</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Docker</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Containerization, Deployment</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-glow"></div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="GCP Logo" width="80" height="80" style="margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">GCP</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Cloud Services, Serverless</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

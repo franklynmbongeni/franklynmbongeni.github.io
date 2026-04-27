@@ -44,5 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    });
+});
+
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinksList = document.querySelector('.nav-links');
+
+    if (mobileMenu && navLinksList) {
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navLinksList.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinksList.classList.remove('active');
+            });
+        });
+    }
 });

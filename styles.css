@@ -1,6 +1,6 @@
 :root {
-    --bg-dark: #0a0a0c;
-    --bg-card-glass: rgba(20, 20, 25, 0.6);
+    --bg-dark: #0a192f;
+    --bg-card-glass: rgba(10, 25, 47, 0.6);
     --border-glass: rgba(255, 255, 255, 0.08);
     --text-primary: #ededed;
     --text-secondary: #8c8c94;
@@ -30,14 +30,13 @@ body {
     background-color: var(--bg-dark);
     line-height: 1.5;
     overflow-x: hidden;
-    cursor: url('assets/batman-cursor.png') 24 12, auto;
 }
 
 a, button, .btn, .nav-link, .nav-link::before, .nav-link::after {
-    cursor: url('assets/batman-cursor.png') 24 12, pointer !important;
+    cursor: pointer !important;
 }
 
-/* Background GIF handled here */
+/* Background handle */
 .bg-container {
     position: fixed;
     top: 0;
@@ -45,10 +44,7 @@ a, button, .btn, .nav-link, .nav-link::before, .nav-link::after {
     width: 100vw;
     height: 100vh;
     z-index: -2;
-    background-image: url('assets/batman-bg.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--bg-dark);
 }
 
 .bg-overlay {
@@ -57,7 +53,7 @@ a, button, .btn, .nav-link, .nav-link::before, .nav-link::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(10,10,12,0.6) 0%, rgba(10,10,12,0.95) 100%);
+    background: radial-gradient(circle at center, rgba(10,25,47,0.3) 0%, rgba(5,13,24,0.9) 100%);
     z-index: -1;
 }
 
@@ -111,11 +107,19 @@ a {
 }
 
 #navbar.scrolled {
-    background: rgba(10, 10, 12, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: transparent;
     border-bottom: 1px solid var(--border-glass);
     padding: 1rem 2rem;
+}
+
+#navbar.scrolled::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: -1;
 }
 
 .nav-content {
@@ -532,6 +536,24 @@ main {
     transform: translateY(0);
 }
 
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 300;
+    margin-left: auto;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    transition: var(--transition-smooth);
+    border-radius: 2px;
+}
+
 @media (max-width: 1100px) {
     main {
         padding-left: 0;
@@ -551,8 +573,55 @@ main {
         justify-content: center;
     }
     
+    .menu-toggle {
+        display: flex;
+    }
+    
     .nav-links {
-        display: none; /* simple mobile behavior */
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 10, 12, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        z-index: 150;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+    }
+    
+    .nav-link {
+        font-size: 2.2rem;
+        transform: none; /* remove slant on mobile */
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-link::before,
+    .nav-link::after {
+        display: none; /* remove blade effect on mobile as it overflows heavily */
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--accent-crimson);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--accent-crimson);
     }
     
     .project-carousel {
