@@ -628,3 +628,30 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+/* Specific Mobile Fixes */
+@media (max-width: 768px) {
+    .logo span {
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .tech-card {
+        padding: 1.5rem 1rem;
+    }
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    .nav-link {
+        font-size: 1.8rem;
+    }
+    .grid-container {
+        grid-template-columns: 1fr !important; /* Force a structured single column view strictly on very small phones */
+    }
+    .hero-visual img {
+        width: 80% !important;
+        max-width: 300px !important;
+        margin: 0 auto;
+        display: block;
+    }
+}
