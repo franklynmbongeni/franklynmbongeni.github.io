@@ -573,7 +573,7 @@ main {
     }
     
     .hero {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
         padding-top: 8rem;
     }
