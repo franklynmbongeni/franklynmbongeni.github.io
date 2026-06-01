@@ -565,6 +565,15 @@ main {
         padding-top: 8rem;
     }
     
+    .hero-visual img {
+        width: 180px !important;
+        height: 180px !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: cover !important;
+        margin: 0 auto;
+        display: block;
+    }
+    
     .hero-title {
         font-size: 3rem;
     }
@@ -648,10 +657,5 @@ main {
     .grid-container {
         grid-template-columns: 1fr !important; /* Force a structured single column view strictly on very small phones */
     }
-    .hero-visual img {
-        width: 80% !important;
-        max-width: 300px !important;
-        margin: 0 auto;
-        display: block;
-    }
+
 }
