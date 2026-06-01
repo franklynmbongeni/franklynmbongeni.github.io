@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Stick Navbar transition
     const navbar = document.getElementById('navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Smooth scrolling for Anchor tags
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-});
+    });
 
     // Mobile Menu Toggle
     const mobileMenu = document.getElementById('mobile-menu');
@@ -63,5 +63,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinksList.classList.remove('active');
             });
         });
+    }
+
+    // Typing animation for home page
+    const typingElement = document.getElementById('typing-text');
+    if (typingElement) {
+        const text = "Hi, I'm Franklyn. I'm currently pursuing a Bachelor's degree in Computer Science at Vistula University. I'm passionate about software development, cloud technology, and building practical solutions to real-world problems. I enjoy learning new technologies, working on personal projects, and continuously improving my programming skills.";
+        let index = 0;
+
+        function typeChar() {
+            if (index < text.length) {
+                typingElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeChar, 25);
+            }
+        }
+
+        // Start typing after a short delay
+        setTimeout(typeChar, 400);
     }
 });

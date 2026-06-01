@@ -326,6 +326,19 @@ main {
     max-width: 500px;
 }
 
+#typing-text::after {
+    content: '|';
+    animation: cursorBlink 0.75s step-end infinite;
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+    from, to { color: transparent }
+    50% { color: var(--accent-gold); }
+}
+
 .hero-actions {
     display: flex;
     gap: 1.5rem;
